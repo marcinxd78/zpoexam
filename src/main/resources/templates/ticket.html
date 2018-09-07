@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bilet</title>
+</head>
+<body>
+<h1>Kup bilet:</h1>
+    <form action="/ticket" method="POST">
+        Imie : <input name="name" type="text" /> Nazwisko : <input name="surname" type="text" />
+        <select name="spectacle_id">
+         <option th:each="n : ${list_spectacle}" th:value="1" th:text="${n.name}"/>
+        </select>
+        <input type="submit" />
+    </form>
+    <h1>Zakupione bilety:</h1>
+     <tr th:each="ticket : ${list_tickets}">
+      <td th:text="${ticket.name}">...</td>
+      <td th:text="${ticket.surname}">...</td>
+       <!--  <td th:text="${ticket.spectacle}">...</td> -->
+        <br>
+    </tr>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Seans</title>
+</head>
+<body>
+<h1>Spis seansów:</h1>
+ <tr th:each="s : ${list_spectacle}">
+      <td th:text="${s.name}">...</td>
+        <br>
+    </tr>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Koszt spektaklu</title>
+</head>
+<body>
+<h1>Spektakle - koszt:</h1>
+ <tr th:each="s : ${list_spectacle}">
+      <td th:text="${s.name}">...</td>
+      <td th:text="${s.getCost()}">...</td>
+        <br>
+    </tr>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aktor</title>
+</head>
+<body>
+<h1>Spis aktorów:</h1>
+ <tr th:each="actor : ${list_actors}">
+      <td th:text="${actor.name}">...</td>
+      <td><a href="#" th:text="${actor.surname}">...</a></td>
+        <td th:text="${actor.salary}">...</td>
+        <br>
+    </tr>
+</body>
+</html>
